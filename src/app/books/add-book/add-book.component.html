@@ -1,0 +1,26 @@
+<p>add-book works!</p>
+<div class="container">
+    <div *ngIf="success_msg" class="alert alert-success" role="alert"> 
+submitted successfull
+    </div>
+    <div *ngIf="error_msg" class="alert alert-danger" role="alert">
+error occured
+    </div>
+    <form [formGroup]="bookForm" (submit)="onSubmit()" class="form-group">
+        <div>
+            <label for="">book title</label>
+            <input type="text" class="form-control" id="title" formControlName="Title">
+        </div>
+        <div>
+            <label for="">Book Author</label>
+            <input type="text" class="form-control" id="Author" formControlName="Author">
+        </div>
+        <div>
+            <label for="">Book edition</label>
+            <input type="number" class="form-control" id="name" formControlName="Edition">
+        </div>
+        <button class="btn btn-success mt-5 " type="submit">submit</button>
+     </form>
+        
+
+</div>

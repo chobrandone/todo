@@ -1,0 +1,99 @@
+<p>stepper works!</p>
+<div class="container">
+        
+    <h1>welcome to my stepper </h1>
+  <div>
+  
+    <mat-horizontal-stepper>
+        <mat-step label="step1">
+          <div class="form-group">
+            <label for="">firstname</label>
+            <input id="name" type="text" class="form-control" 
+            formControlName="firstname" required>
+        </div>
+        
+            
+          <div class="form-group">
+            <label for="">lastname</label>
+            <input type="text" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="">email</label>
+            <input type="email" class="form-control">
+          </div>
+          <button mat-button matStepperNext  class="btn btn-success">Next</button>
+        </mat-step>
+        <mat-step aria-label="step2">
+          <div class="form-group">
+            <label for="">card Number</label>
+            <input type="number" class="form-control">
+          </div>
+          <div class="form-group">
+            <select name="" id="" class="custom-select">
+              <option value="select card type">select your card</option>
+              <option value="1">Visa Card</option>
+              <option value="1">Master Card</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="">security code</label>
+            <input type="password" class="form-control">
+          </div>
+          <button mat-button matStepperPrevious class="btn btn-success">BACK</button>
+          <button mat-button matStepperNext  class="btn btn-success">Next</button>
+        </mat-step>
+        <mat-step label="step3">
+          <h1>check out</h1>
+          <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th scope="col">name of item</th>
+                  <th scope="col">Quantity</th>
+                  <th scope="col">Unit price</th>
+                  <th scope="col">Total price</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td >dress</td>
+                  <td>1</td>
+                  <td>5000frs</td>
+                  <td>5000frs</td>
+               
+                </tr>
+                <tr>
+                   <th >shoes</th>
+                  <td>2</td>
+                  <td>5000frs</td>
+                  <td>10000frs</td>
+                
+                </tr>
+                <tr>
+                  <th >phone</th>
+                  <td>1</td>
+                  <td >120,000frs</td>
+                  <td >120,000frs</td>
+                </tr>
+               
+                <tr>
+                  <td colspan="3">total</td>
+                  <td>130,000frs</td>
+                </tr>
+                
+              </tbody>
+            </table>
+            <button mat-button matStepperNext type="submit" (click)="onsubmit()"  class="btn btn-success">Submit</button>
+
+        </mat-step>
+        <mat-step>
+            <div class="jumbotron">
+                <h1 class="display-4">congratulations</h1>
+   
+                <p>your transaction was succesfull .</p>
+                <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+              </div>
+        </mat-step>
+        </mat-horizontal-stepper>
+
+</div>
+</div>

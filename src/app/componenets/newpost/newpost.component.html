@@ -1,0 +1,29 @@
+<p>newpost works!</p>
+<div class="container">
+    <form action="" [formGroup]="myform" (ngsubmit)="onsubmit()">
+        <div class="form-group">
+            <label for="User"> User Id</label>
+            <input type="text" class="form-control" id="User" 
+            formControleName="UserId"
+            [ngClass]="{'is-valid ':submitted && f.userid.invalid}">
+        </div>
+        <div class="form-group">
+             <label for="Id">Id</label>
+             <input type="text" class="form-control" id="Id" 
+             [ngClass]="{'is-valid ':submitted && f.Id.invalid}"
+             formControleName="Id">
+        </div>
+        <div class="form-group">
+            <label for="Title">Title</label>
+            <input type="text" class="form-control" 
+            formControleName="Title"
+            [ngClass]="{'is-valid ':submitted && f.Title.invalid}">
+            id="Title">
+        </div>
+        <div class="form-group">
+            <label for="body">body</label>
+            <textarea name="" id="body" cols="30" rows="10" class="form-control"></textarea>
+        </div>
+        <button class="btn btn-primary" type="submit">submit</button>
+    </form>
+</div>
